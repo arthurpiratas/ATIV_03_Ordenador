@@ -83,7 +83,12 @@ public class Ordenador implements IOrdenador{
 		
 		
 	}
-
 	
+	
+	public void limpaArray() {
+		listaNumero.clear();
+		maiorValor = 0; 
+		menorValor = 0; 
+	}
 
 }
