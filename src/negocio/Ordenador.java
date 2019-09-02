@@ -1,4 +1,6 @@
+package negocio;
 import java.util.ArrayList;
+
 
 public class Ordenador implements IOrdenador{
 	

@@ -1,14 +1,18 @@
 package testes;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import negocio.IOrdenador;
+
 class OrdenadorTeste {
+	
+	
 
 	@BeforeEach
 	void setUp() throws Exception {
+		
 	}
 
 	@Test
