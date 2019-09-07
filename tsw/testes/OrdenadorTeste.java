@@ -3,7 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 
-import org.junit.jupiter.api.AfterEach;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -68,6 +68,7 @@ class OrdenadorTeste {
 		
 		
 		
+		
 		// insere coleção 
 		
 		
@@ -75,6 +76,8 @@ class OrdenadorTeste {
 			ordenador.inserirColecao(numeros); 
 		    });
 	}
+	
+	
 	
 	@Test
 	void insereColecaoNul() {
@@ -84,9 +87,30 @@ class OrdenadorTeste {
 		
 		
 		
-		// insere coleçrdenador.inserirColecao(numeros); 
+		ordenador.inserirColecao(numeros); 	
 		   
 	}
 	
-
+	@Test
+	void testaMaiorNumeroInsereColecao() {
+		
+		// Criando lista e setando valores 
+		ArrayList<String> numeros = new ArrayList<String>();
+				
+		numeros.add("0.3");
+		numeros.add("0.5"); 
+		numeros.add("0.0");
+		numeros.add("0.5"); 
+		numeros.add("0.3");
+		numeros.add("0.4"); 
+		numeros.add("0.4"); 
+			
+		// insere coleção 	
+			
+		ordenador.inserirColecao(numeros); 	
+		
+		assertEquals(0.5, ordenador.getMaiorValor());
+			
+		
+	}
 }
