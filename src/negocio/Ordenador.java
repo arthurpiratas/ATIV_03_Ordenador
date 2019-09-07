@@ -90,5 +90,9 @@ public class Ordenador implements IOrdenador{
 		maiorValor = 0; 
 		menorValor = 0; 
 	}
+	
+	public int getTamanhoLista() {
+		return this.listaNumero.size(); 
+	}
 
 }
