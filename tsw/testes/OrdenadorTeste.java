@@ -113,4 +113,53 @@ class OrdenadorTeste {
 			
 		
 	}
+	
+	
+	
+	@Test
+	void testaInsereValorSucesso() {
+		
+		// Insere Valor
+		ordenador.informarValor("7.5");
+		
+		assertEquals(7.5, ordenador.getMaiorValor());
+			
+		
+	}
+	
+	@Test
+	void testaInsereValorCaracetere() {
+		
+		// Insere Valor
+		ordenador.informarValor("AAAA");
+		
+		assertSame("AAAA", ordenador.getMaiorValor());
+			
+		
+	}
+	
+	@Test
+	void testaInsereValorCaracetereExececao() {
+		
+		// Insere Valor
+		
+		
+		assertThrows(NumberFormatException.class, () -> {
+			ordenador.informarValor("AAAA");
+		    });
+			
+		
+	}
+	
+	@Test
+	void testaInsereValorNulo() {
+		
+		// Insere Valor
+		
+		String numero = null; 
+		
+		ordenador.informarValor(numero);
+			
+		
+	}
 }
