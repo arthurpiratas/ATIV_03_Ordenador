@@ -50,8 +50,14 @@ public class Ordenador implements IOrdenador{
 	@Override
 	public Double getMenorValor() {
 		// TODO Auto-generated method stub
+		this.menorValor = listaNumero.get(0).doubleValue(); 
+		
+		if(listaNumero  != null) {
+			this.menorValor = listaNumero.get(0).doubleValue(); 
+		}
+		
 		for (Double double1 : listaNumero) {
-			if(menorValor < double1) {
+			if(double1 < menorValor) {
 				menorValor = double1.doubleValue();
 			}
 		}
@@ -78,7 +84,7 @@ public class Ordenador implements IOrdenador{
 			return listaNumero.get(((listaNumero.size()/2)));
 			
 		}else {
-			return (listaNumero.get(((listaNumero.size()/2))) + listaNumero.get(((listaNumero.size()/2)+1)))/2;
+			return (listaNumero.get(((listaNumero.size()/2))) + listaNumero.get(((listaNumero.size()/2)-1)))/2;
 		}
 		
 		
